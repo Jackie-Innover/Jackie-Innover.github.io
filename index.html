@@ -6,5 +6,12 @@ First GitHub Page
 </head>
 <body>
 <h1>This is my First GitHub Page</h1>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 </body>
 </html>
