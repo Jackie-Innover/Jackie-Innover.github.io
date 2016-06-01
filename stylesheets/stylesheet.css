@@ -354,6 +354,24 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+div.tweet p {
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-left: 10px solid #f28500;
+  padding: 2px 0.5em 2px 0.5em;
+  margin-bottom: 20px;
+  background-color: #fbfbfb;
+}
+
+div.tweet i {
+  color: brown;
+  font-size: 14px;
+  font-style: normal;
+  border: 1px solid #aaa;
+  margin-right: 0.5em;
+  padding: 0px 2px;
+}
+
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
@@ -421,5 +439,4 @@ Small Device Styles
     max-width: 480px;
     font-size: 11px;
   }
-
 }
