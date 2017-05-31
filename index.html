@@ -1,65 +1,74 @@
-<!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="YaYa : ">
+<head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link href="/home.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
 
-    <title>YaYa</title>
-  </head>
+    <title>个人域名博客</title>
 
-  <body>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-		
-          <h1 id="project_title">丫丫爸爸的个人Tweet</h1>
-          <h2 id="project_tagline"></h2>
-		  
-        </header>
+        ga('create', 'UA-45586344-1', 'yinwang.org');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="#">个人域名博客</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">博客</a></li>
+                    <li><a href="./tweet.html">Tweet</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin: 5% 10% 2% 10%">
+        <table style="width: 100%">
+            <tr>
+                <td width="70%">
+                    <ul class="list-group">
+
+                        <li class="list-group-item title">
+                            <a href="/blog-cn/2017/05/25/dsl">DSL</a>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p style="font-style:italic;color:cornflowerblue;">丫丫爸爸 is typing <img src="images/progress-blue-dot.gif" style="box-shadow:none; margin:0;height:14px">
-		<div class="tweet">
-            <p><i>2017.05.27</i><br />个人域名今天审批通过了, 哈哈 , www.haiyu.me<br />
-            <p><i>2017.05.26</i><br />Node.js 非常Nice!<br />
-			<p><i>2017.05.18</i><br />Golang, Docker, 程序员的知识迭代就是充满了激情!<br />
-			<p><i>2017.05.14</i><br />今天是母亲节, 可是妈妈已经离开了我们, 去了另一个世界.妈妈我想你!<br />
-			<p><i>2017.05.13</i><br />丫丫今天满两周岁了,时间过得真快!感谢老婆为这个家的付出.<br />
-			<p><i>2017.03.02</i><br />阴历2月初5, 阳历3月2号, 妈妈离开了我们.<br />
-			<p><i>2016.12.08</i><br />研究一下AutoHotKey 和 TypeScript.<br />
-			<p><i>2016.10.20</i><br />希望可以网上缴天然气费.<br />
-			<p><i>2016.09.09</i><br />最近好累啊! 不过马上中秋节了, 回家好好休息一下.
-			<p><i>2016.08.15</i><br />今天午饭后登录知乎后, 得知Wings战队获得TI6冠军.恭喜Wings!
-			<p><i>2016.08.08</i><br />手机又不识别SIM卡了,第二次了.上次是因为主板烧了, 难道这次又是?还好还在保质期内.
-			<p><i>2016.08.04</i><br />任性, 吵架, 唉, 生活何其苦啊!!!!!.................................
-			<p><i>2016.07.03</i><br />丫丫今天已经学会走路了,丫丫很高兴, 一直不停地来回走.
-			<p><i>2016.06.29</i><br />足坛三大假象: 意大利很弱,英格兰很强,阿根廷可以夺冠.
-			<p><i>2016.06.27</i><br />今天看了最新的一期<<极限挑战>>, 感触颇多,推荐给大家, 希望大家也有所收获.
-			<p><i>2016.06.23</i><br />丫丫拉了好几天肚子了, 昨天去了医院拿了三盒药,花了200元,只希望丫丫尽快好起来.
-			<p><i>2016.06.17</i><br />Enterprise Migration 问题太多了,~~~~~~~~~~~~~~~~~~
-			<p><i>2016.06.15</i><br />新任务来了, Integrate Overland Storage!!!
-			<p><i>2016.06.13</i><br />Migrate Appliance & Enterprise 的 Error Handle 问题还是很多啊, 同志们, 继续努力!.
-			<p><i>2016.06.08</i><br />高考, 成就了多少人,又耽误了多少人.
-			<p><i>2016.06.03</i><br />昨天晚上合并完分之后,简单的测试了一下功能,发现了很多问题, 今天估计得很晚才能下班喽,
-			昨天就因为搭建测试环境导致9点半点才到家, 丫丫和妈妈都睡了.
-			<p><i>2016.06.02</i><br />Migrate Appliance & Enterprise 功能花费了2个月零10天, 明天QA开始pre-test.
-			<p><i>2016.06.01</i><br />今天是六一儿童节,也是丫丫过的第一个儿童节,希望丫丫健康快乐的成长.
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-    </div>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-    
+</body>
 
-  </body>
 </html>
