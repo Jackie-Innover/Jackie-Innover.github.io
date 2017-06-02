@@ -14,6 +14,7 @@
 - **[Node.js Demo](#demo)**
 - **[SuperVisor](#supervisor)**
 - **[模块和包](#模块和包)**
+- **[Node.js 包管理器(NPM)](#nodejs-包管理器(NPM))**
 
 
 
@@ -200,4 +201,110 @@ Node.js 提供了 require 函数来调用其他模块, 而且模块都是基于�
 require 函数获取了这个模块，然后才能使用其中的对象。
 
 - 创建及加载模块
-- ​
+
+  - 创建模块
+
+    在 Node.js 中，创建一个模块非常简单，因为一个文件就是一个模块，我们要关注的问
+    题仅仅在于如何在其他文件中获取这个模块。Node.js 提供了 exports 和 require 两个对
+    象，其中 exports 是模块公开的接口，require 用于从外部获取一个模块的接口，即所获
+    取模块的 exports 对象。
+
+    demo
+
+    **mymodule**.js
+
+    ```
+
+    var name;
+
+    exports.setName=(theName)=>{
+        name=theName;
+    }
+
+    exports.sayHello=()=>{
+        console.log(`Hello ${name}`)
+    }
+    ```
+
+    **mymoduledemo**.js
+
+    ```
+    var myModule=require('./mymodule');
+    myModule.setName('Ken');
+    myModule.sayHello();
+    ```
+
+    > NOTE
+    > 在这个示例中, mymodule.js 通过exports对象把setName和sayHello作为模块的访问接口.
+    >
+    > 在mymoduledemo.js 中, 通过require('./mymodule') 来加载模块, 然后就可以访问mymodule.js 中exports 对象的成员函数了.
+
+  - 单次加载
+
+    上面的例子中有点类似创建一个对象, 但实际上和对象又有本质的区别. 因为**require不会重复加载模块**, 也就是说无论调用多少次require, 获得的模块都是**同一个**.
+
+    demo, 然后检查运算结果.
+
+    ```
+    var myModule=require('./mymodule');
+    myModule.setName('Ken');
+
+    var myModule2=require('./mymodule');
+    myModule.setName('Ben');
+
+    myModule.sayHello();
+    myModule2.sayHello();
+    ```
+
+
+-   覆盖exports
+
+    通过exports.xxx=xxx 来覆盖exports, 然后new 来实例化不同的对象.
+
+    > NOTE:
+    >
+    > 事实上，exports 本身仅仅是一个普通的空对象，即 {}，它专门用来声明接口，本
+    > 质上是通过它为模块闭包①的内部建立了一个有限的访问接口。因为它没有任何特殊的地方，
+    > 所以可以用其他东西来代替
+
+    > Warning:
+    >
+    > 不可以通过对 exports 直接赋值代替对 module.exports 赋值。
+    > exports 实际上只是一个和 module.exports 指向同一个对象的变量，
+    > 它本身会在模块执行结束后释放，但 module 不会，因此只能通过指定
+    > module.exports 来改变访问接口
+
+
+- 创建包
+
+  包是在模块基础上更深一步的抽象，Node.js 的包类似于 C/C++ 的函数库或者 Java/.Net
+  的类库。它将某个独立的功能封装起来，用于发布、更新、依赖管理和版本控制。Node.js 根
+  据 CommonJS 规范实现了包机制，开发了 npm来解决包的发布和获取需求。
+  Node.js 的包是一个目录，其中包含一个 JSON 格式的包说明文件 package.json。严格符
+  合 CommonJS 规范的包应该具备以下特征：
+
+  - package.json必须在包的顶层目录下;
+  - 二进制文件应该在 bin 目录下;
+  -  JavaScript 代码应该在 lib 目录下;
+  - 文档应该在 doc 目录下;
+  - 单元测试应该在 test 目录下;
+
+  Node.js 对包的要求并没有这么严格，只要顶层目录下有 package.json，并符合一些规范
+  即可。**当然为了提高兼容性，我们还是建议你在制作包的时候，严格遵守 CommonJS 规范**。
+
+  我们使用这种方法可以把文件夹封装为一个模块，即所谓的包。包通常是一些模块的集
+  合，在模块的基础上提供了更高层的抽象，相当于提供了一些固定接口的函数库。通过定制
+  package.json，我们可以创建更复杂、更完善、更符合规范的包用于发布.
+
+  > NOTE:
+  >
+  > 通过执行下面的命令可以轻松创建package.json
+  >
+  > ```
+  > npm init
+  > ```
+
+
+
+
+### Node.js 包管理器(NPM)
