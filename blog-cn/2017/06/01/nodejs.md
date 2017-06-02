@@ -4,7 +4,7 @@
 
 - **[什么是Node.js](#什么是-nodejs)**
 - **[Node.js 的特点](#nodejs-的特点)**
-- **[安装 Node.js & NPM](#安装-nodejs-&-npm)**
+- **[安装 Node.js & NPM](#安装-nodejs--npm)**
 - **Node.js Demo**
 - **File System API**
 - **Networking with Sockets**
@@ -68,7 +68,7 @@ Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境,
 
 
 
-### 安装Node.js & NPM
+### 安装 Node.js & NPM
 
 Windows下安装Node.js步骤:
 
