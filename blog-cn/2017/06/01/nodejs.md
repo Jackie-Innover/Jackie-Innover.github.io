@@ -2,9 +2,9 @@
 
 ****
 
-- **[什么是Node.js](#what-is-node.js)**
-- **[Node.js 的特点](#node.js-feature)**
-- **[安装 Node.js & NPM](#install-node.js-and-npm)**
+- **[什么是Node.js](#what-is-nodejs)**
+- **[Node.js 的特点](#nodejs-feature)**
+- **[安装 Node.js & NPM](#install-nodejs-and-npm)**
 - **Node.js Demo**
 - **File System API**
 - **Networking with Sockets**
@@ -49,7 +49,7 @@ Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境,
 
 
 
-###Node.js Feature
+### Node.js Features
 
 - 异步编程
 - 事件驱动
