@@ -14,7 +14,8 @@
 - **[Node.js Demo](#demo)**
 - **[SuperVisor](#supervisor)**
 - **[模块和包](#模块和包)**
-- **[Node.js 包管理器(NPM)](#nodejs-包管理器(NPM))**
+- **[Node.js 包管理器(NPM)](#nodejs-包管理器npm)**
+- **[模块加载机制](#模块加载机制)**
 
 
 
@@ -308,3 +309,62 @@ require 函数获取了这个模块，然后才能使用其中的对象。
 
 
 ### Node.js 包管理器(NPM)
+
+Node.js包管理器，即npm是 Node.js 官方提供的包管理工具，它已经成了 Node.js 包的
+标准发布平台，用于 Node.js 包的发布、传播、依赖控制。npm 提供了命令行工具，使你可
+以方便地下载、安装、升级、删除包，也可以让你作为开发者发布并维护包。
+
+
+
+**本地模式和全局模式**
+
+npm在默认情况下会从http://npmjs.org搜索或下载包，将包安装到当前目录的node_modules
+子目录下。
+
+在使用 npm 安装包的时候，有两种模式：本地模式和全局模式。默认情况下我们使用 npm
+install命令就是采用本地模式，即把包安装到当前目录的 node_modules 子目录下。Node.js
+的 require 在加载模块时会尝试搜寻 node_modules 子目录，因此使用 npm 本地模式安装
+的包可以直接被引用。
+npm 还有另一种不同的安装模式被成为全局模式，使用方法为：
+npm [install/i] -g [package_name]
+与本地模式的不同之处就在于多了一个参数 -g。我们在 介绍 supervisor那个小节中使用
+了 npm install -g supervisor 命令，就是以全局模式安装 supervisor。
+为什么要使用全局模式呢？多数时候并不是因为许多程序都有可能用到它，为了减少多
+重副本而使用全局模式，而是因为本地模式不会注册 PATH 环境变量。举例说明，我们安装
+supervisor 是为了在命令行中运行它，譬如直接运行 supervisor script.js，这时就需要在 PATH
+环境变量中注册 supervisor。npm 本地模式仅仅是把包安装到 node_modules 子目录下，其中
+的 bin 目录没有包含在 PATH 环境变量中，不能直接在命令行中调用。而当我们使用全局模
+式安装时，npm 会将包安装到系统目录，譬如 /usr/local/lib/node_modules/，同时 package.json 文
+件中 bin 字段包含的文件会被链接到 /usr/local/bin/。/usr/local/bin/ 是在PATH 环境变量中默认
+定义的，因此就可以直接在命令行中运行 supervisor script.js命令了。
+
+总而言之，当我们要把某个包作为工程运行时的一部分时，通过本地模式获取，如果要
+在命令行下使用，则使用全局模式安装。
+
+
+
+> NOTE:
+>
+> 使用全局模式安装的包并不能直接在 JavaScript 文件中用 require 获
+> 得，因为 require 不会搜索 /usr/local/lib/node_modules/。我们会在后面
+> 详细介绍模块的加载顺序。
+
+
+
+**发布包**
+
+在发布前，我们还需要获得一个账号用于今后维护自己的包，使用 npm adduser 根据
+提示输入用户名、密码、邮箱，等待账号创建完成。完成后可以使用 npm whoami 测验是
+否已经取得了账号。
+
+接下来，在 package.json 所在目录下运行 npm publish，稍等片刻就可以完成发布了。
+打开浏览器，访问 https://www.npmjs.com/~{username} 就可以找到自己刚刚发布的包了。现在我们可以在
+世界的任意一台计算机上使用 npm install byvoidmodule 命令来安装它。
+
+如果你的包将来有更新，只需要在 package.json 文件中修改 version 字段，然后重新
+使用 npm publish 命令就行了。如果你对已发布的包不满意（比如我们发布的这个毫无意
+义的包），可以使用 npm unpublish 命令来取消发布。
+
+
+
+### 模块加载机制
