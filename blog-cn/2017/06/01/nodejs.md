@@ -3,7 +3,7 @@
 ****
 
 - **[什么是Node.js](#what-is-nodejs)**
-- **[Node.js 的特点](#nodejs-feature)**
+- **[Node.js 的特点](#nodejs-features)**
 - **[安装 Node.js & NPM](#install-nodejs-and-npm)**
 - **Node.js Demo**
 - **File System API**
@@ -17,7 +17,7 @@
 
 
 
-### What is Node.js?
+### 什么是 Node.js?
 
 Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境, 同时还提供了很多系统级的API, 比如文件操作, 网络编程等, 支持的系统包括*nux, Windows.所以可以编写系统级或者服务器端的JavaScript代码, 交给Node.js来编译执行.
 
