@@ -1,3 +1,5 @@
+
+
 # Node.js
 
 ****
@@ -9,14 +11,9 @@
 - **[Node.js 的缺点](#nodejs-的缺点)**
 - **[Node.js 的应用场景](#nodejs-的应用场景)**
 - **[安装 Node.js & NPM](#安装-nodejs--npm)**
-- **Node.js Demo**
-- **File System API**
-- **Networking with Sockets**
-- **Robust Messaging Service**
-- **Accessing Database**
-- **Scalable Web Service**
-- **Web Apps**
-- **References**
+- **[Node.js Demo](#demo)**
+- **[SuperVisor](#supervisor)**
+- **[模块和包](#模块和包)**
 
 
 
@@ -51,11 +48,6 @@ Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境,
 >
 > Chakra, 用于Microsoft Edge.
 >
-> ![Node.js架构图](https://sfault-image.b0.upaiyun.com/411/182/4111821277-577a300546802_articlex)
->
-> 
->
-> ![Node.js内部架构图](https://i.stack.imgur.com/u1O2O.png)
 
 
 
@@ -110,7 +102,6 @@ Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境,
 - 只支持单核CPU, 不能充分利用多核CPU
 - 可靠性低, 一旦代码某个环节崩溃, 整个系统都会崩溃
 - 开源组件库质量参差不齐, 更新快, 不向下兼容
-- Debug不方便, 错误没有stack trace
 
 
 
@@ -148,5 +139,65 @@ Windows下安装Node.js步骤:
   npm -v
   ```
 
-### Demo{#demo}
+### Demo
 
+- Hello World
+- HTTP 服务器
+- 读取文件
+- EventEmitter
+
+> Node.js 命令行工具
+>
+> ```
+> node script.js
+> ```
+>
+> ```
+> node --help
+> ```
+>
+> Node的REPL模式
+>
+> REPL (Read-eval-print loop), 即输入-运算执行-输出-循环
+
+
+
+### SuperVisor
+
+在开发Node.js HTTP Server 时, 无论你修改了代码的哪一部分, 都必须终止Node.js, 在重新运行才会奏效.
+
+这是因为Node.js 只有在第一次引用到某部分时才会去解析脚本文件, 以后都会直接访问内存, 避免重新载入.
+
+Node.js的这种设计虽然有利于提高性能, 但是不利于开发调试. 因为我们在开发过程中总是希望修改后, 立即看到效果, 而不是每次都终止进程并重启. 
+
+SuperVisor可以帮你实现这个功能, 它会监视代码的改动, 并自动重启Node.js.
+
+可以通过下面的命令安装SuperVisor
+
+```
+npm install supervisor -g
+```
+
+然后使用supervisor命令启动app.js
+
+```
+supervisor app.js
+```
+
+
+
+### 模块和包
+
+模块(Module)和包(package)是Node.js最重要的支柱. 开发一个具有一定规模的程序不可能只用一个文件, 通常需要把各个功能拆分, 封装, 然后组合起来, 模块正是为了实现这种方式而诞生的.
+
+Node.js 提供了 require 函数来调用其他模块, 而且模块都是基于文件的, 机制十分简单.
+
+- 什么是模块
+
+模块是 Node.js 应用程序的基本组成部分，文件和模块是一一对应的。换言之，一个Node.js 文件就是一个模块,这个文件可能是 JavaScript 代码、JSON 或者编译过的 C/C++ 扩展。
+在前面的例子中，我们曾经用到了 var http = require('http')，其中 http
+是 Node.js 的一个核心模块，其内部是用 C++ 实现的，外部用 JavaScript 封装。我们通过
+require 函数获取了这个模块，然后才能使用其中的对象。
+
+- 创建及加载模块
+- ​
