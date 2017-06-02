@@ -343,14 +343,6 @@ supervisor 是为了在命令行中运行它，譬如直接运行 supervisor scr
 
 
 
-> NOTE:
->
-> 使用全局模式安装的包并不能直接在 JavaScript 文件中用 require 获
-> 得，因为 require 不会搜索 /usr/local/lib/node_modules/。我们会在后面
-> 详细介绍模块的加载顺序。
-
-
-
 **发布包**
 
 在发布前，我们还需要获得一个账号用于今后维护自己的包，使用 npm adduser 根据
