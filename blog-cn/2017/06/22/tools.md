@@ -20,13 +20,28 @@
 
   It runs on Mac OS X, Windows and Linux.
 
-- [Notepad++](https://notepad-plus-plus.org/)
+- [TortoiseGit](https://tortoisegit.org/)
 
-  Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by [GPL](http://www.gnu.org/copyleft/gpl.html) License.
+  TortoiseGit is a Windows Shell Interface to Git and based on TortoiseSVN. It's open source and can fully be build with freely available software.
+
+  Since it's not an integration for a specific IDE like Visual Studio, Eclipse or others, you can use it with whatever development tools you like, and with any type of file. Main interaction with TortoiseGit will be using the context menu of the Windows explorer.
+
+  TortoiseGit supports you by regular tasks, such as committing, showing logs, diffing two versions, creating branches and tags, creating patches and so on (see our [Screenshots](https://tortoisegit.org/about/screenshots/) or [documentation](https://tortoisegit.org/docs/)).
+
+  It is developed under the [GPL](https://www.gnu.org/licenses/gpl-2.0). Which means it is completely free for anyone to use, including in a commercial environment, without any restriction. The source code is also freely available, so you can even develop your own version if you wish to.
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 
   Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, MacOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity). Begin your journey with VS Code with these [introductory videos](https://code.visualstudio.com/docs/introvideos/overview).
+
+- [Sublime Text](https://www.sublimetext.com/)
+
+  Sublime Text is a sophisticated text editor for code, markup and prose.
+  You'll love the slick user interface, extraordinary features and amazing performance.
+
+- [Notepad++](https://notepad-plus-plus.org/)
+
+  Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by [GPL](http://www.gnu.org/copyleft/gpl.html) License.
 
 - [EmEditor](https://zh-cn.emeditor.com/)
 
@@ -53,11 +68,6 @@
 - [TeamCity](https://www.jetbrains.com/teamcity/)
 
   Powerful Continuous integration out of the box.
-
-- [Sublime Text](https://www.sublimetext.com/)
-
-  Sublime Text is a sophisticated text editor for code, markup and prose.
-  You'll love the slick user interface, extraordinary features and amazing performance.
 
 - [Regex Buddy](http://www.regexbuddy.com/)
 
