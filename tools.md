@@ -125,6 +125,10 @@
 
   With new project planning tools, project timelines, workflow diagram improvements, and more new features and user interface enhancements, MindManager 2017 for Windows is a major release you won’t want to miss.
 
+- fanqiang(https://github.com/bannedbook/fanqiang)
+
+  科学上网
+
 
 ### 系统类工具
 
