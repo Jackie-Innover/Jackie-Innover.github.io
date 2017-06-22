@@ -34,6 +34,10 @@
 
   Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, MacOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity). Begin your journey with VS Code with these [introductory videos](https://code.visualstudio.com/docs/introvideos/overview).
 
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+
+  Python IDE for Professional Developers.
+
 - [Sublime Text](https://www.sublimetext.com/)
 
   Sublime Text is a sophisticated text editor for code, markup and prose.
