@@ -75,7 +75,41 @@
 
   Meet DataGrip, our new database IDE that is tailored to suit specific needs of professional SQL developers.
 
-- ​
+- [cports](http://www.nirsoft.net/utils/cports.html)
+
+  CurrPorts is network monitoring software that displays the list of all currently opened TCP/IP and UDP ports on your local computer. For each port in the list, information about the process that opened the port is also displayed, including the process name, full path of the process, version information of the process (product name, file description, and so on), the time that the process was created, and the user that created it. 
+  In addition, CurrPorts allows you to close unwanted TCP connections, kill the process that opened the ports, and save the TCP/UDP ports information to HTML file , XML file, or to tab-delimited text file. 
+  CurrPorts also automatically mark with pink color suspicious TCP/UDP ports owned by unidentified applications (Applications without version information and icons)
+
+- [Dependency Walker](http://dependencywalker.com/)
+
+  Dependency Walker is a free utility that scans any 32-bit or 64-bit Windows module (exe, dll, ocx, sys, etc.) and builds a hierarchical tree diagram of all dependent modules. For each module found, it lists all the functions that are exported by that module, and which of those functions are actually being called by other modules. Another view displays the minimum set of required files, along with detailed information about each file including a full path to the file, base address, version numbers, machine type, debug information, and more.
+
+- [Advanced Fine and Replace](http://www.abacre.com/afr/)
+
+  Search multiple documents with smart queries and batch replace lines of text!
+
+- [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx)
+
+  Ever wondered which program has a particular file or directory open? Now you can find out. *Process Explorer* shows you information about which handles and DLLs processes have opened or loaded.
+
+  The *Process Explorer* display consists of two sub-windows. The top window always shows a list of the currently active processes, including the names of their owning accounts, whereas the information displayed in the bottom window depends on the mode that *Process Explorer* is in: if it is in handle mode you'll see the handles that the process selected in the top window has opened; if *Process Explorer* is in DLL mode you'll see the DLLs and memory-mapped files that the process has loaded. *Process Explorer* also has a powerful search capability that will quickly show you which processes have particular handles opened or DLLs loaded.
+
+  The unique capabilities of *Process Explorer* make it useful for tracking down DLL-version problems or handle leaks, and provide insight into the way Windows and applications work.
+
+- [Typora](https://typora.io/)
+
+  Typora will give you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Replace them with a real live preview feature to help you concentrate the content itself.
+
+- [Beyond Compare](http://scootersoftware.com/)
+
+  Beyond Compare is focused.  Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.
+
+- [MindManager](https://www.mindjet.com/)
+
+  The all-new MindManager 2017 is here and it’s now the most integrated mapping solution in the world. With new universal file export, you can now share your MindManager content with anyone on any platform, exporting your best ideas, plans and notes to 700+ web apps. Create and share dynamic information maps, mind maps, process flow diagrams, concept maps, project dashboards, and now interactive timelines. Or, turn your maps into interactive dashboards and receive updates when changes are made in any of the 700+ integrated apps.
+
+  With new project planning tools, project timelines, workflow diagram improvements, and more new features and user interface enhancements, MindManager 2017 for Windows is a major release you won’t want to miss.
 
 
 ### 系统类工具
@@ -100,16 +134,6 @@
 
   Clover 是 Windows Explorer 资源管理器的一个扩展，为其增加类似谷歌 Chrome 浏览器的多标签页功能。
 
-- [cports](http://www.nirsoft.net/utils/cports.html)
-
-  CurrPorts is network monitoring software that displays the list of all currently opened TCP/IP and UDP ports on your local computer. For each port in the list, information about the process that opened the port is also displayed, including the process name, full path of the process, version information of the process (product name, file description, and so on), the time that the process was created, and the user that created it. 
-  In addition, CurrPorts allows you to close unwanted TCP connections, kill the process that opened the ports, and save the TCP/UDP ports information to HTML file , XML file, or to tab-delimited text file. 
-  CurrPorts also automatically mark with pink color suspicious TCP/UDP ports owned by unidentified applications (Applications without version information and icons)
-
-- [Dependency Walker](http://dependencywalker.com/)
-
-  Dependency Walker is a free utility that scans any 32-bit or 64-bit Windows module (exe, dll, ocx, sys, etc.) and builds a hierarchical tree diagram of all dependent modules. For each module found, it lists all the functions that are exported by that module, and which of those functions are actually being called by other modules. Another view displays the minimum set of required files, along with detailed information about each file including a full path to the file, base address, version numbers, machine type, debug information, and more.
-
 - [Dukto](http://www.msec.it/blog/?page_id=11)
 
    It’s an easy file transfer tool designed for LAN use
@@ -128,27 +152,11 @@
 
   This exceptional and free toolkit will give you the ability to manage Microsoft Office and it will also allow you to use your license and deploy this popular program
 
-- [Advanced Fine and Replace](http://www.abacre.com/afr/)
-
-  Search multiple documents with smart queries and batch replace lines of text!
-
-- [Beyond Compare](http://scootersoftware.com/)
-
-  Beyond Compare is focused.  Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.
-
 - [LockHunter](http://lockhunter.com/)
 
   ##### LockHunter is a foolproof file unlocker
 
   It is a free tool to delete files blocked by something you do not know. LockHunter is useful for fighting against malware, and other programs that are blocking files without a reason. Unlike other similar tools it deletes files into the recycle bin so you may restore them if deleted by mistake.
-
-- [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx)
-
-  Ever wondered which program has a particular file or directory open? Now you can find out. *Process Explorer* shows you information about which handles and DLLs processes have opened or loaded.
-
-  The *Process Explorer* display consists of two sub-windows. The top window always shows a list of the currently active processes, including the names of their owning accounts, whereas the information displayed in the bottom window depends on the mode that *Process Explorer* is in: if it is in handle mode you'll see the handles that the process selected in the top window has opened; if *Process Explorer* is in DLL mode you'll see the DLLs and memory-mapped files that the process has loaded. *Process Explorer* also has a powerful search capability that will quickly show you which processes have particular handles opened or DLLs loaded.
-
-  The unique capabilities of *Process Explorer* make it useful for tracking down DLL-version problems or handle leaks, and provide insight into the way Windows and applications work.
 
 - [Virtual Clone Drive](https://www.redfox.bz/en/virtual-clonedrive.html)
 
@@ -157,12 +165,6 @@
   Image files generated with CloneBD/CloneDVD/CloneCD or other applications like ImgBurn can be mounted onto a virtual drive from your hard-disk or from a network drive and used in the same manner as inserting them into a normal CD/DVD/Blu-ray drive.
 
   Probably the best virtual drive software, Virtual CloneDrive allows you to enjoy the freedom of a virtual drive and is completely free.
-
-- [MindManager](https://www.mindjet.com/)
-
-  The all-new MindManager 2017 is here and it’s now the most integrated mapping solution in the world. With new universal file export, you can now share your MindManager content with anyone on any platform, exporting your best ideas, plans and notes to 700+ web apps. Create and share dynamic information maps, mind maps, process flow diagrams, concept maps, project dashboards, and now interactive timelines. Or, turn your maps into interactive dashboards and receive updates when changes are made in any of the 700+ integrated apps.
-
-  With new project planning tools, project timelines, workflow diagram improvements, and more new features and user interface enhancements, MindManager 2017 for Windows is a major release you won’t want to miss.
 
 - [DnsJumper](http://www.sordum.org/)
 
@@ -177,10 +179,6 @@
 - [KeePass](http://keepass.info/)
 
   KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish). For more information, see the [features page](http://keepass.info/features.html). 
-
-- [Typora](https://typora.io/)
-
-  Typora will give you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Replace them with a real live preview feature to help you concentrate the content itself.
 
 - [Evernote](https://evernote.com/?noredirect)
 
