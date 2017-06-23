@@ -451,9 +451,9 @@ require('express') 和 require('./node_modules/express') 加载两次，也不�
 (1) 如果some_module 是一个核心模块，直接加载，结束。
 (2) 如果some_module以“ / ”、“ ./ ”或“ ../ ”开头，按路径加载 some_module，结束。
 (3) 假设当前目录为 current_dir，按路径加载 current_dir/node_modules/some_module。
- 如果加载成功，结束。
- 如果加载失败，令current_dir为其父目录。
- 重复这一过程，直到遇到根目录，抛出异常，结束
+​        .如果加载成功，结束。
+​        .如果加载失败，令current_dir为其父目录。
+​        .重复这一过程，直到遇到根目录，抛出异常，结束
 
 
 
