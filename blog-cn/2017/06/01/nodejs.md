@@ -32,6 +32,8 @@ Node.js使用C++语言编写而成, 是一个后端的Javascript的运行环境,
 
 > [V8引擎](https://zh.wikipedia.org/wiki/V8_(JavaScript%E5%BC%95%E6%93%8E))
 >
+> [认识V8引擎](https://zhuanlan.zhihu.com/p/27628685)
+>
 > V8是由Google开发并开源的JavaScript引擎, 用于Google Chrome中.
 >
 > V8在运行之前将JavaScript编译成机器码而非字节码或是解释执行它, 以提升性能. 更进一步, 使用了如内联缓存 (inline caching) 等方法来提高性能. 有了这些性能, JavaScript程序与V8引擎的速度媲美二进制编译.
