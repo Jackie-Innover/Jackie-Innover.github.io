@@ -14,14 +14,14 @@
 >
 >   在以下两条语句执行后, 变量carname的值依然是 "Volvo"
 >
->   ```
+>   ```javascript
 >   var carname="Volvo";
 >   var carname;
 >   ```
 >
 > - 可以在字符串中使用单引号或双引号, 只要不匹配包围字符串的引号即可.
 >
->   ```
+>   ```javascript
 >   var answer="Nice to meet you!";
 >   var answer="He is called 'Bill'";
 >   var answer='He is called "Bill"';
@@ -29,7 +29,7 @@
 >
 > - 极大或极小的数字可以通过科学(指数)计数法来书写.
 >
->   ```
+>   ```javascript
 >   var y=123e5;      // 12300000
 >   var z=123e-5;     // 0.00123
 >   ```
@@ -38,7 +38,7 @@
 >
 > - JavaScript 数组
 >
->   ```
+>   ```javascript
 >   var cars = new Array();
 >   cars[0] = "Audi";
 >   cars[1] = "BMW";
@@ -47,13 +47,13 @@
 >
 >   condensed array:
 >
->   ```
+>   ```javascript
 >   var cars = new Array("Audi", "BMW", "Volvo");
 >   ```
 >
 >   literal array:
 >
->   ```
+>   ```javascript
 >   var cars = ["Audi", "BMW", "Volvo"];
 >   ```
 >
@@ -61,7 +61,7 @@
 >
 >   对象由大括号分隔. 在括号内部, 对象的属性以名称和值的形式 (name : value) 来定义. 属性由逗号分隔.
 >
->   ```
+>   ```javascript
 >   var person = {firstName : "Bill", lastName : "Gates", id : 5566};
 >   ```
 >
@@ -69,7 +69,7 @@
 >
 >   空格和折行无关紧要, 声明可以横跨多行:
 >
->   ```
+>   ```javascript
 >   var person = {
 >   firstName : "Bill", 
 >   lastName : "Gates", 
@@ -77,7 +77,7 @@
 >   };
 >   ```
 >
->   ```
+>   ```javascript
 >   var person = new Object;
 >   person.firstName = "Bill";
 >   person.lastName = "Gates";
@@ -86,14 +86,14 @@
 >
 >   可以向已存在的对象添加属性和方法.
 >
->   ```
+>   ```javascript
 >   person.age = 56;
 >   person.eyeColor = "blue";
 >   ```
 >
 >   对象属性有两种寻址方式: 
 >
->   ```
+>   ```javascript
 >   name = person.firstName;
 >   name = person["firstName"];
 >   ```
@@ -105,7 +105,7 @@
 >
 >   可以通过将变量的值设置为null 来清空变量.
 >
->   ```
+>   ```javascript
 >   cars = null;
 >   person = null;
 >   ```
@@ -114,7 +114,7 @@
 >
 >   当声明新变量时, 可以使用关键字 "new" 来指定变量类型:
 >
->   ```
+>   ```javascript
 >   var carName = new String;
 >   var x = new Number;
 >   var y = new Boolean;
@@ -128,7 +128,7 @@
 >
 >   函数就是包裹在大括号中的代码块, 前面使用了关键字 function:
 >
->   ```
+>   ```javascript
 >   function sayHello(){
 >     // 代码块
 >   }
@@ -138,7 +138,7 @@
 >
 >   **带参数的函数**:
 >
->   ```
+>   ```javascript
 >   function sayHello(name, job){
 >     // 代码块
 >   }
@@ -150,7 +150,7 @@
 >
 >   如果仅仅希望退出函数时, 也可使用return语句. 返回值是可选的.
 >
->   ```
+>   ```javascript
 >   function add(x, y){
 >     return x+y;
 >   }
@@ -225,7 +225,7 @@
 >
 >   document.write("demo");
 >
->   ```
+>   ```html
 >   <!DOCTYPE html>
 >   <html>
 >   <body>
@@ -242,7 +242,7 @@
 >
 >   document.getElementById(id).innerHTML="";
 >
->   ```
+>   ```html
 >   <!DOCTYPE html>
 >   <html>
 >   <body>
@@ -268,7 +268,7 @@
 >
 >   document.getElementById(id).attribute=new value;
 >
->   ```
+>   ```html
 >   <!DOCTYPE html>
 >   <html>
 >   <body>
@@ -293,7 +293,7 @@
 >
 >   如需改变HTML元素的样式, 请使用这个语法:
 >
->   ```
+>   ```html
 >   <p id="p2">Hello World!</p>
 >
 >   <script>
@@ -309,9 +309,113 @@
 >
 >   HTML DOM使JavaScript有能力对HTML事件做出反应
 >
->   ​
+>   [Demo](events.html)
 >
-> - aa
+> - 添加和删除节点(HTML元素)
+>
+>   添加新的HTML元素:
+>
+>   如需向 HTML DOM 添加新元素，您必须首先创建该元素（元素节点），然后向一个已存在的元素追加该元素。
+>
+>   ```javascript
+>           function addNewElement() {
+>
+>               var elementContainer=document.getElementById("elementContainer");
+>               var newLabel=document.createElement("label");
+>               var idAttribute=document.createAttribute("id");
+>               newLabel.setAttribute("id", "newLine");
+>               var newTextNode=document.createTextNode("新添加的...");
+>               newLabel.appendChild(newTextNode);
+>               elementContainer.appendChild(newLabel);
+>
+>           }
+>
+>           function removeElement() {
+>               var newLineElement=document.getElementById("newLine");
+>               elementContainer.removeChild(newLineElement);
+>           }
+>   ```
+>
+>   [Demo](element.html)
+>
+>   删除已有的HTML元素
+>
+>   如需删除 HTML 元素，您必须首先获得该元素的父元素, 然后从父元素中删除该子元素.
+>
+>   常用的解决方案：找到您希望删除的子元素，然后使用其 parentNode 属性来找到父元素：
+>
+>   [Demo](element.html)
+>
+> - JavaScript对象
+>
+>   JavaScript中的所有事物都是对象: 字符串, 数组, 数字, 函数...
+>
+>   JavaScript允许自定义对象
+>
+>   JavaScript提供多个内建对象, 比如 String, Date, Array 等等.
+>
+>   对象只是带有属性和方法的特殊数据类型.
+>
+>   创建JavaScript对象有两种不同的方法:
+>
+>   - 定义并创建对象的实例
+>
+>     ```javascript
+>     var person = new Object();
+>     person.firstName="Bill";
+>     person.lastName="Gates";
+>     person.age=56;
+>     person.eyeColor="blue";
+>     ```
+>
+>     替代语法 (使用对象 literals)
+>
+>     ```javascript
+>     var person ={"fistName": "Bill", "lastName": "Gates", "age":56, "eyeColor":"blue"};
+>     ```
+>
+>   - 使用函数来定义对象, 然后创建新的对象实例
+>
+>     ```javascript
+>     function person(firstName, lastName, age, eyeColor){
+>       this.firstName=firstName;
+>       this.lastName=lastName;
+>       this.age=age;
+>       this.eyeColor=eyeColor;
+>     }
+>
+>     var billGates=new person("Bill", "Gates", 56, "blue");
+>     var steveJobs=new person("Steve", "Jobs", 48, "green");
+>     ```
+>
+>   添加方法:
+>
+>   ```javascript
+>   function person(firstName, lastName, age, eyeColor){
+>     this.firstName=firstName;
+>     this.lastName=lastName;
+>     this.age=age;
+>     this.eyeColor=eyeColor;
+>     
+>     this.changeName=changeName;
+>     
+>     function changeName(name){
+>       this.lastName=name;
+>     }
+>   }
+>   ```
+>
+>   > JavaScript类
+>   >
+>   > JavaScript是面向对象的语言, 但是JavaScript不使用类.
+>   >
+>   > 在JavaScript中, 不会创建类, 也不会通过类来创建对象.
+>   >
+>   > JavaScript是基于prototype, 而不是基于类的.
+>
+>   > prototype
+>   >
+>   > 关于prototype会单独列出, 单独学习.
 
 
 
@@ -354,7 +458,7 @@
 >
 > JavaScript 语句 *try* 和 *catch* 是成对出现的。
 >
-> ```
+> ```javascript
 > try
 >   {
 >   //在这里运行代码
@@ -379,7 +483,7 @@
 >
 > 如果把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息。
 >
-> ```
+> ```javascript
 > throw exception
 > ```
 >
@@ -387,7 +491,7 @@
 > 实例
 > 本例检测输入变量的值。如果值是错误的，会抛出一个异常（错误）。catch 会捕捉到这个错误，并显示一段自定义的错误消息：
 >
-> ```
+> ```html
 > <script>
 > function myFunction()
 > {
@@ -413,8 +517,6 @@
 > <button type="button" onclick="myFunction()">Test Input</button>
 > <p id="mess"></p>
 > ```
->
-> zzz
 
 
 
