@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> HTML Demo </title>
+    <script>
+        var iNum = 0;
+
+		outermost:
+		for (var i=0; i<10; i++) {
+		  for (var j=0; j<10; j++) {
+			if (i == 5 && j == 5) {
+			continue outermost;
+		  }
+		  iNum++;
+		  document.write(iNum);
+		  document.write("<br />");
+		  }
+		}
+
+		alert(iNum);	//输出 "95"
+    </script>
+</head>
+
+<body>
+<h1> 文档标题 </h1>
+<p>这是个段落 </p>
+</body>
+</html>
