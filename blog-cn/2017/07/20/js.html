@@ -4,26 +4,29 @@
 <head>
     <title> HTML Demo </title>
     <script>
-        var iNum = 0;
-
-		outermost:
-		for (var i=0; i<10; i++) {
-		  for (var j=0; j<10; j++) {
-			if (i == 5 && j == 5) {
-			continue outermost;
-		  }
-		  iNum++;
-		  document.write(iNum);
-		  document.write("<br />");
-		  }
-		}
-
-		alert(iNum);	//输出 "95"
+			var a=10;    
+			function test(){
+				a=5
+				//alert(a);
+				console.log(a)
+				//alert(this.a);
+				console.log(this);
+				console.log(this.a);
+				var a;
+				//alert(this.a);
+				console.log(this);
+				console.log(this.a);
+				//alert(a);
+				console.log(a);
+			}
+			
+			//test();
+			
     </script>
 </head>
 
 <body>
-<h1> 文档标题 </h1>
-<p>这是个段落 </p>
+<h1 onclick="test();"> 文档标题 </h1>
+<p onclick="new test();">这是个段落 </p>
 </body>
 </html>
