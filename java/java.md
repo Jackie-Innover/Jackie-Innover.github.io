@@ -1,8 +1,7 @@
 # Think Java
 
 - **[Input and Output](#input-and-output)**
-- ​
-
+- **[For and Foreach](#for-and-foreach)**
 
 
 ------
@@ -120,10 +119,6 @@ public class Hello {
 > own line. First you read the number, and then you read the rest of the line, which is
 > just a newline character.
 
-
-
-
-
 ##### Formatting Output
 
 | type character       | input          | string result                            |
@@ -149,3 +144,36 @@ public class Hello {
 | %f   | floating-point                           | 6.789000 |
 | %.2f | rounded to 2 decimal places              | 6.79     |
 
+aaa
+
+------
+
+**For and Foreach**
+
+Since traversing arrays is so common, Java provides an alternative syntax that makes
+the code more compact. For example, consider a for loop that displays the elements
+of an array on separate lines:
+
+```java
+        for (int i = 0; i < src.length; i++) {
+            System.out.println(src[i]);
+        }
+```
+
+We could rewrite the loop like this:
+
+```java
+        for (double value : src){
+            System.out.println(value);
+        }
+```
+
+This statement is called an enhanced for loop. You can read it as, “for each value in
+values”. It’s conventional to use plural nouns for array variables and singular nouns
+for element variables.
+
+Enhanced for loops often make the code more readable, especially for accumulating
+values. But they are not helpful when you need to refer to the index, as in search
+operations.
+
+##### 
