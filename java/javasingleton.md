@@ -6,7 +6,6 @@
 - **[Initialization on Demand Holder](#initialization-on-demand-holder)**
 
 
-
 ------
 
 ### 饥饿模式
@@ -119,3 +118,6 @@ public final class Demo {
     }
 }
 ```
+
+
+[Initialization-on-demand holder idiom](https://en.wikipedia.org/wiki/Initialization-on-demand_holder_idiom)
