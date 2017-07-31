@@ -294,3 +294,5 @@ Running...
 
 ### Thread Priority
 
+In Java, every thread has a priority. Higher priority threads get more preference in terms of CPU, I/O time, etc. than lower priority threads.
+
