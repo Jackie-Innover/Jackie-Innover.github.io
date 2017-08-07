@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>JavaScript 定义类或对象</title>
+    <script>
+
+        function Car(color, doors, mpg){
+            this.color=color;
+            this.doors=doors;
+            this.mpg=mpg;
+            this.drivers= new Array("Mike", "John");
+        };
+
+        Car.prototype.showColor = function () {
+            document.writeln(this.color);
+        };
+
+
+        var car1= new Car("Blue", 3, 23);
+        var car2 = new Car("Red", 4, 25);
+        car1.showColor();
+        document.writeln("<br />");
+        car2.showColor();
+        document.writeln("<br />");
+        document.writeln(car1 instanceof Car);
+        document.writeln("<br />");
+        document.writeln(car2 instanceof Car);
+
+        car1.drivers.push("Bill");
+        document.writeln("<br />");
+        document.writeln("car1's drivers: "+car1.drivers);
+
+        document.writeln("<br />");
+        document.writeln("car2's drivers: "+car2.drivers);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
