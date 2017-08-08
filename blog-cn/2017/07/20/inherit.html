@@ -1,0 +1,196 @@
+<html>
+<head>
+    <title>JavaScript 继承机制</title>
+    <script>
+
+        /**
+         function Person(firstName, lastName, age, address){
+
+            this.firstName=firstName;
+            this.lastName=lastName;
+            this.age=age;
+            this.address=address;
+            this.cars = new Array("Sanling", "Luhu", "BaDao");
+
+            if(typeof Person._initialized == "undefined"){
+                Person.prototype.showName = function () {
+                    document.writeln("Name: "+ this.firstName + "." + this.lastName);
+                };
+            };
+
+            Person._initialized=true;
+        };
+         */
+
+        /**
+         function ClassA(color){
+            this.color=color;
+
+            this.showColor = function () {
+                document.writeln(this.color);
+            };
+        };
+
+         function ClassB(color, name){
+            this.newMethod=ClassA;
+            this.newMethod(color);
+            delete this.newMethod;
+
+            this.name=name;
+            this.showName= function () {
+                document.writeln(name);
+            };
+        };
+
+         var a = new ClassA("Blue");
+         var b = new ClassB("Red", "Jackie");
+         a.showColor(); // 输出 "Blue"
+         document.writeln("<br />")
+         b.showColor(); // 输出 "Red"
+         document.writeln("<br />")
+         b.showName(); // 输出 "Jackie"
+         */
+
+        /**
+         function ClassZ(){
+            this.newMethod = ClassX;
+            this.newMethod();
+            delete this.newMethod;
+
+            this.newMethod = ClassY;
+            this.newMethod();
+            delete this.newMethod;
+        };
+         */
+
+        /**
+         function showColor(prefix, suffix){
+            document.writeln(prefix + this.color + suffix);
+        };
+
+         var obj = new Object();
+         obj.color= "Blue";
+         showColor.call(obj, "The color is ", " a very nice color indeed");
+         */
+
+
+
+
+         /*function ClassA(color){
+            this.color=color;
+
+            this.showColor = function () {
+                document.writeln(this.color);
+            };
+        };
+
+         function ClassB(color, name){
+            //this.newMethod=ClassA;
+            //this.newMethod(color);
+            //delete this.newMethod;
+             ClassA.apply(this, arguments);
+
+            this.name=name;
+            this.showName= function () {
+                document.writeln(name);
+            };
+        };
+
+         var a = new ClassA("Blue");
+         var b = new ClassB("Red", "Jackie");
+         a.showColor(); // 输出 "Blue"
+         document.writeln("<br />")
+         b.showColor(); // 输出 "Red"
+         document.writeln("<br />")
+         b.showName(); // 输出 "Jackie"
+        document.writeln("<br />")
+        document.writeln(b instanceof ClassB)
+        document.writeln("<br />")
+        document.writeln(b instanceof ClassA)
+        document.writeln("<br />")
+        document.writeln(a instanceof ClassB)
+        document.writeln("<br />")
+        document.writeln(a instanceof ClassA)*/
+
+
+        /* function showColor(prefix, suffix) {
+             document.writeln(prefix + this.color + suffix);
+         };
+
+         var obj = new Object();
+         obj.color = "Blue";
+         showColor.apply(obj, new Array("The color is ", " a very nice color indeed"));*/
+
+
+        /*function ClassA() {
+
+        }
+
+        ClassA.prototype.color = "";
+        ClassA.prototype.showColor = function () {
+            document.writeln(this.color);
+        };
+
+        function ClassB() {
+
+        }
+
+        ClassB.prototype = new ClassA();
+        ClassB.prototype.name = "";
+        ClassB.prototype.showName = function () {
+            document.writeln(this.name);
+        }
+
+        var a = new ClassA();
+        var b = new ClassB();
+        a.color="Blue";
+        b.color="Red";
+        b.name="Jackie";
+
+        a.showColor();
+        document.writeln("<br />")
+        b.showColor();
+        document.writeln("<br />")
+        b.showName();
+        document.writeln("<br />")
+
+        document.writeln(b instanceof ClassA);
+        document.writeln("<br />")
+        document.writeln(b instanceof ClassB);*/
+
+        function ClassA(color){
+            this.color=color;
+        };
+
+        ClassA.prototype.showColor = function () {
+            document.writeln(this.color);
+        };
+
+        function ClassB(color, name){
+            ClassA.call(this, color);
+
+            this.name = name;
+        };
+
+        ClassB.prototype = new ClassA();
+        ClassB.prototype.showName = function () {
+            document.writeln(this.name);
+        };
+
+        var a = new ClassA("Blue");
+        var b = new ClassB("Red", "John");
+        a.showColor();
+        b.showColor();
+        b.showName();
+
+        document.writeln(b instanceof ClassA);
+        document.writeln(b instanceof ClassB);
+
+        document.writeln(a instanceof ClassA);
+        document.writeln(a instanceof ClassB);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
