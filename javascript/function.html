@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>JavaScript 定义类或对象</title>
+    <script>
+
+
+        /**
+         *
+        Number.prototype.toHexString = function () {
+            return this.toString(16);
+        };
+
+        var num = 15;
+        document.writeln(num.toHexString());
+        document.write("<br />")
+*/
+
+        /**
+         *
+        Array.prototype.enqueue = function (item) {
+            this.push(item);
+        };
+
+        Array.prototype.dequeue = function (item) {
+            this.shift(item);
+        };
+
+        Array.prototype.indexOf = function (item) {
+            for (var i=0; i<this.length; i++) {
+                if (item == this[i]) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        var arr = new Array(3)
+        arr[0] = "George"
+        arr[1] = "John"
+        arr[2] = "Thomas"
+
+        arr.enqueue("Bill");
+        document.write(arr);
+
+        document.write("<br />")
+
+        arr.dequeue();
+        document.write(arr);
+
+        document.write("<br />")
+        document.writeln("Thomas's index is :"+arr.indexOf("Thomas"))
+
+         */
+/**
+        Object.prototype.showValue = function () {
+            alert(this.valueOf());
+        };
+
+        var str = "hello";
+        var num = 25;
+        str.showValue();
+        num.showValue();
+*/
+
+/**
+        Function.prototype.originalToString = Function.prototype.toString;
+
+        Function.prototype.toString = function () {
+            var functionStrValue= this.originalToString();
+            if(functionStrValue.length > 100){
+                return "Function too long to display.";
+            } else {
+                return functionStrValue;
+            };
+        };
+
+        function demo() {
+            doucment.writeln("Hello World!");
+        }
+
+        function demo2() {
+            doucment.writeln("Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g Hello World! a b c d e f g");
+        }
+
+        document.write("<br />")
+        document.writeln(demo.toString());
+        document.write("<br />")
+        document.writeln(demo2.toString());
+
+       */
+
+        var obj = new Object();
+        Object.prototype.helloWorld = function () {
+            document.writeln("Hello World!");
+        };
+
+        obj.helloWorld();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

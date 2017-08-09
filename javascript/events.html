@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> JavaScript HTML DOM Events Demos </title>
+    <script src="js/moment-with-locales.min.js"> </script>
+    <script>
+
+        function checkWhehterCookieEnabled() {
+
+            var cookieCheck=document.getElementById("cookieCheck");
+
+            if(navigator.cookieEnabled){
+                cookieCheck.innerHTML="已启用Cookie";
+            }
+            else{
+                cookieCheck.innerHTML="未启用Cookie";
+            }
+        }
+        
+        function demoOne() {
+            var demoOneInfo = document.getElementById("demoOneInfo");
+
+            if (demoOneInfo.innerHTML == "") {
+                demoOneInfo.innerHTML = 0;
+            }
+            else {
+
+                var count = parseInt(demoOneInfo.innerHTML);
+                count++;
+                demoOneInfo.innerHTML = count;
+            }
+        }
+
+        function showDateTimeInfo() {
+            var dateTimeInfo = document.getElementById("dateTimeInfo");
+            dateTimeInfo.innerHTML=Date();
+        }
+
+        function showLocalDateTimeInfo() {
+            var dateTimeInfo = document.getElementById("dateTimeInfo");
+            dateTimeInfo.innerHTML=moment().format("YYYY/MM/DD HH:mm:ss");
+        }
+        
+        function addEventFunction() {
+            var eventDemoButton=document.getElementById("btnEventDemo");
+            eventDemoButton.onclick=eventDemoButtonHandler;
+        }
+
+        function eventDemoButtonHandler() {
+            var eventDemoInfo=document.getElementById("eventDemoInfo");
+            eventDemoInfo.innerHTML="process event handler";
+        }
+
+        function mouseOverDemo(element) {
+            element.innerHTML="Over";
+        }
+
+        function mouseOutDemo(element) {
+            element.innerHTML="Out";
+        }
+
+    </script>
+</head>
+
+<body onload="checkWhehterCookieEnabled()">
+<h1> 这个网页会展示JavaScript使用HTML DOM来响应HTML事件 </h1>
+<hr/>
+
+<div>
+ <h3 id="cookieCheck">cookie 检测</h3>
+</div>
+
+<div>
+    <h3>示例1: 改变元素内容.</h3>
+    <h3 onclick="demoOne()">请点击该文本</h3>
+    <p id="demoOneInfo"></p>
+</div>
+
+<div>
+    <h3>示例2 </h3>
+    <button onclick="showDateTimeInfo()">点击这里</button>
+    <button onclick="showLocalDateTimeInfo()">Local</button>
+    <p id="dateTimeInfo"></p>
+</div>
+
+<div>
+    <h3>示例3 动态添加事件</h3>
+    <button onclick="addEventFunction()">添加事件</button>
+    <button id="btnEventDemo">Click</button>
+    <p id="eventDemoInfo"></p>
+</div>
+
+<div>
+    <h3 onmouseover="style.color='red'" onmouseout="style.color='blue'">示例4 onMouseOver & onMouseOut</h3>
+    <div id="moveMouse" onmouseover="mouseOverDemo(this)" onmouseout="mouseOutDemo(this)" style="background-color: cornflowerblue; width: 120px; height: 20px; padding: 40px; color: white">把鼠标移动到上面</div>
+</div>
+
+</body>
+</html>

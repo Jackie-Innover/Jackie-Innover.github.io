@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Add and Delete HTML Elements Demos </title>
+
+    <script>
+        function addNewElement() {
+
+            var elementContainer=document.getElementById("elementContainer");
+            var newLabel=document.createElement("label");
+            var idAttribute=document.createAttribute("id");
+            newLabel.setAttribute("id", "newLine");
+            var newTextNode=document.createTextNode("新添加的...");
+            newLabel.appendChild(newTextNode);
+            elementContainer.appendChild(newLabel);
+
+        }
+
+        function removeElement() {
+
+            //var elementContainer=document.getElementById("elementContainer");
+            var lastLineElement=document.getElementById("lastLine");
+            var newLineElement=document.getElementById("newLine");
+
+            if(lastLineElement!=null)
+            {
+                //elementContainer.removeChild(lastLineElement);
+                lastLineElement.parentNode.removeChild(lastLineElement);
+            }
+
+            if(newLineElement!=null)
+            {
+                //elementContainer.removeChild(newLineElement);
+                newLineElement.parentNode.removeChild(newLineElement);
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+<h1> 这个网页会展示JavaScript使用HTML DOM来添加和移除HTML元素 </h1>
+<hr/>
+<button onclick="addNewElement()">添加元素</button>
+<button onclick="removeElement()">移除元素</button>
+
+<div id="elementContainer">
+    <label id="firstLine">第一行</label><br />
+    <label id="lastLine">第二行</label><br />
+</div>
+
+</body>
+</html>

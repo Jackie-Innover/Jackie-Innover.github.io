@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>JavaScript 定义类或对象</title>
+    <script>
+
+        function Car(color, doors, mpg){
+            this.color=color;
+            this.doors=doors;
+            this.mpg=mpg;
+            this.showColor= function () {
+                document.writeln(this.color);
+            };
+        };
+
+        var car1= new Car("blue", 4, 23);
+        var car2= new Car("red", 3, 25);
+        car1.showColor();
+        document.writeln("<br />");
+        car2.showColor();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
