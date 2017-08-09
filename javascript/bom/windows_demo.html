@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>window object demo</title>
+    <script>
+        var newWindow;
+
+        function newWindow() {
+            newWindow = window.open("http://www.haiyu.me");
+            newWindow.status="Hello Haiyu.";
+        };
+
+        function moveWindow(){
+            newWindow.moveWindow
+        };
+    </script>
+</head>
+
+<body>
+    <p id="demo" onclick="newWindow();">Open</p> <br />
+    <p id="demo" onclick="moveWindow();">Move</p> <br />
+</body>
+
+</html>
